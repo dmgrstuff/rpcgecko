@@ -1,3 +1,4 @@
 # RPCGecko release information
-version: 1.0
-release_url: https://github.com/dmgrstuff/rpcgecko/releases/tag/v1.0
+version: 1.1
+description: "This update adds new icons and other small fixes."
+release_url: https://github.com/dmgrstuff/rpcgecko/releases/tag/v1.1
