@@ -1,11 +1,9 @@
-# common cache files
 /__pycache__
 /.vscode
-# pyinstaller
 /build
 /dist
-*.spec
-# virtualenv
+/old_assets
 /venv
-# the configuration file
-config.yml
+*.spec
+*.yml
+*.csv
