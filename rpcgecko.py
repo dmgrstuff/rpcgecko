@@ -132,7 +132,7 @@ class interface: # handles UI functions
             else:
                 show_nnid = False
                 nnid = None
-            cf = {"client_id": default_client, "custom_format": False, "ip": ip, "menu_splash": False, "nnid": nnid, "show_icons": True, "show_nnid": show_nnid, "status_format": "{title_name} ({title_code_short})", "update_csv": True} # default config
+            cf = {"client_id": default_client, "custom_format": False, "ip": ip, "menu_splash": False, "nnid": nnid, "show_icons": True, "show_nnid": show_nnid, "status_format": "{title_name} ({title_code_short})"} # default config
             cfg.dump(cf)
         except KeyboardInterrupt:
             print("\nClosing... (no configuration has been modified)")
