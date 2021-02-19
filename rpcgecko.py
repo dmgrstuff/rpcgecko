@@ -30,7 +30,7 @@ class config: # handles loading and saving configuration
         
     def load(self):
         try: f = open(self.cfg_file, "r")
-        except (FileNotFoundError, yaml.Scanner.ScannerError):
+        except FileNotFoundError:
             ui.autoconfig()
             f = open(self.cfg_file, "r")
         cf = yaml.safe_load(f)
@@ -47,6 +47,7 @@ class config: # handles loading and saving configuration
 
     def load_titles(self):
         if os.path.isfile(self.titles) == False:
+            print("Downloading title database...")
             response = requests.get("https://dmgrstuff.github.io/rpcgecko/titles.csv") # get our file from the server
             if response.status_code == 200: # if everything is good,
                 f = open(self.titles, "w+", encoding="utf-8")
@@ -66,6 +67,7 @@ class config: # handles loading and saving configuration
 
     def load_icons(self):
         if os.path.isfile(self.icons) == False:
+            print("Downloading icon database...")
             response = requests.get("https://dmgrstuff.github.io/rpcgecko/icons.yml")
             if response.status_code == 200:
                 f = open(self.icons, "w+")
@@ -141,6 +143,7 @@ class interface: # handles UI functions
             print(f"That's all we need for now. You can change these and other settings anytime in the menu or config.yml. ({sec})")
             time.sleep(1)
             print("\u001b[2A")
+        print("\n")
 
     def menu(self, error=None):
         if type(error) == str:
@@ -395,8 +398,7 @@ icons = cfg.load_icons()
 try: rpc = rpc(cf["client_id"]) 
 except (TypeError, KeyError): ui.autoconfig()
 print(f"\033]0;{ui.app_name} {ui.version_str} ({platform.system()})\007", end="") # window title
-try: 
-    ui.cls()
+try:
     ui.update_check(return_err=False) # checks for updates on startup, you could effectively disable this by replacing it with ui.menu()
 except KeyboardInterrupt: # handle Ctrl+C a little more gracefully
     print("Closing...")
