@@ -1,9 +1,4 @@
-<p align="center">
-  <img aligh="left"width="256px" height="256px" src="https://i.living-me.me/i/fckk.png">
-</p>
-
-<h1 align="center">RPCGecko</h1>
-<h4 align="center">A configurable Discord Rich Presence app for the Wii U</h4>
+![RPCGecko - a configurable Discord Rich Presence app for the Wii U](https://dmgrstuff.github.io/rpcgecko/img/header.png)
 
 ## Usage
 
