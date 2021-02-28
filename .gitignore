@@ -1,4 +1,10 @@
+# Cache files
 /__pycache__
 /.vscode
-/old*
+# PyInstaller/venv stuff
+/build
+/dist
+/venv
+*.spec
+# Configuration
 config.yml
