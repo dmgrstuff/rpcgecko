@@ -4,23 +4,24 @@
 
 Download the [latest release](https://github.com/dmgrstuff/rpcgecko/releases/latest) and run the executable, or see the [build instructions](https://github.com/dmgrstuff/rpcgecko/blob/main/docs/building.md) to build or run it from source.
 
-The first time you run RPCGecko, it will ask for your Wii U's local IP address as well as your Nintendo Network ID if you want to display it. A `config.yml` file will be created in the same directory so you'll want to put the executable somewhere convenient. You can change any of these settings from within the application or by editing the file manually.
+RPCGecko will ask for your Wii U's local IP address as well as your Nintendo Network ID if you choose to display it. A `config.yml` file will be created in the same directory so you'll want to put the executable somewhere convenient. You can change any of these settings from within the application or by editing the file manually.
 
-Once TCPGecko is running on your Wii U, you can connect to it (and Discord) in RPCGecko's terminal-based menu.
+Once you run the TCPGecko Installer on your Wii U, you can connect to it in RPCGecko's terminal-based menu.
 
 ## Known issues
 
-#### RPCGecko limitations
+#### RPCGecko bugs/limitations
 
-- Not all Wii U games will display icons in your status - this is because Discord requires Rich Presence assets to be manually uploaded to their developer portal. If a game you play doesn't have an icon (which is likely the case), it is possible to [add your own](https://github.com/dmgrstuff/rpcgecko/blob/main/docs/custom-assets.md).
+- Icons don't display for every title because Discord requires assets to be pre-uploaded - see [custom-assets.md](https://github.com/dmgrstuff/rpcgecko/blob/main/docs/custom-assets.md) for more info and a simple workaround.
+- Reading from memory (and refreshing Rich Presence) can hang sometimes, and closing your terminal in this case will probably freeze your console.
 
 #### TCPGecko limitations
 
-- TCPGecko can cause some applications, like **YouTube**, to freeze your console. Also, apps accessible through the in-game HOME Menu (like the **Friends List** and **Internet Browser**) can cause TCPGecko to hang until you exit them.
-- Exiting **System Settings** will unload TCPGecko (and other homebrew) from memory. This will cause the connection to timeout and you'll need to re-run the TCPGecko Installer to continue using RPCGecko.
+- Some applications (**YouTube**, for example) might freeze your console if TCPGecko is running. Also, system applets like the **Friends List** and **Internet Browser** can cause TCPGecko to hang until you exit them.
+- Exiting **System Settings** will unload TCPGecko and other memory resident homebrew. You'll need to re-run the TCPGecko Installer to continue using RPCGecko.
 - vWii will likely never be supported because of the way backwards compatibility works on the Wii U.
 
-If you find something else that doesn't work or just need help, feel free to file an issue and I'll try to help you out as best I can.
+RPCGecko is a **work-in-progress**, so feel free to make an issue or pull request if you run into problems.
 
 ## Credits
 
