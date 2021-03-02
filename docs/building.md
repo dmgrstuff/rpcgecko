@@ -22,7 +22,7 @@ If you don't have **Git** or can't install it, you can just [download the .zip](
 
 *Switch to the new environment by running `source bin\activate` on Mac or Linux or `.\venv\Scripts\activate.bat (?)` on Windows.*
 
-**2.** Run `pip install pyinstaller`, followed by `pip install requirements.txt`. This installs all the required modules.
+**2.** Run `pip install pyinstaller`, followed by `pip install -r requirements.txt`. This installs all the required modules.
 
 **3.** To build the executable as a single file, run `pyinstaller -F rpcgecko.py`. This creates a single `rpcgecko` executable in `\dist\rpcgecko`. It's slower, as necessary files are extracted to a temporary folder before running it, but more portable.
 
