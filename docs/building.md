@@ -20,9 +20,9 @@ If you don't have **Git** or can't install it, you can just [download the .zip](
 
 *I'd recommended making a* ***virtual environment*** *before you start to avoid polluting your main Python install with packages you likely won't use in the future. Run `pip install virtualenv` and then `virtualenv venv` to set one up.*
 
-*Switch to the new environment by running `source bin\activate` on Mac or Linux or `.\venv\Scripts\activate.bat (?)` on Windows.*
+*Switch to the new environment by running `source bin\activate` on Mac or Linux or `.\venv\Scripts\activate.bat` on Windows.*
 
-**2.** Run `pip install pyinstaller`, followed by `pip install requirements.txt`. This installs all the required modules.
+**2.** Run `pip install pyinstaller`, followed by `pip install -r requirements.txt`. This installs all the required modules.
 
 **3.** To build the executable as a single file, run `pyinstaller -F rpcgecko.py`. This creates a single `rpcgecko` executable in `\dist\rpcgecko`. It's slower, as necessary files are extracted to a temporary folder before running it, but more portable.
 
